@@ -1,6 +1,8 @@
 package ro.pub.cs.systems.eim.colocviu1_1
 
+import android.content.ComponentName
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -60,5 +62,17 @@ class Colocviu1_1MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.buttonAct)!!.setOnClickListener(click)
 
+        val intent = Intent().apply {
+            component = ComponentName(
+                "ro.pub.cs.systems.eim.colocviu1_1",
+                "ro.pub.cs.systems.eim.colocviu1_1.Colocviu1_1Service"
+            )
+        }
+        intent.putExtra("dirs", "abscd")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
+        }
     }
 }

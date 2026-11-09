@@ -29,7 +29,13 @@
         <activity android:name=".Colocviu1_1OtherActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
+
         </activity>
+
+        <service
+            android:name=".Colocviu1_1Service"
+            android:exported="true"
+            android:foregroundServiceType="dataSync" />
     </application>
 
 </manifest>
