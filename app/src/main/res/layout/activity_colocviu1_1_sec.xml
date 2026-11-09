@@ -4,4 +4,29 @@
     android:layout_height="match_parent"
     android:id="@+id/sec">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextDirs2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/buttonReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

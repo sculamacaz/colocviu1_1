@@ -37,6 +37,7 @@ class Colocviu1_1MainActivity : AppCompatActivity() {
 
     private fun launchActivity() {
         val myIntent: Intent = Intent(this, Colocviu1_1OtherActivity::class.java)
+        myIntent.putExtra("dirs", editTextDirs!!.getText().toString())
         startActivity(myIntent)
     }
 
